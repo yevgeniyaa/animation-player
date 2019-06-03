@@ -1,1 +1,1 @@
-# animation-player
+# Animation player
