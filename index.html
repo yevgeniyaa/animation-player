@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Animation Player</title>
+</head>
+<body>
+<header class="header">
+    <button class="header__menu-button"><i class="fas fa-bars"></i></button>
+    <h1 class="header__title">CodeJam - Animation Player</h1>
+</header>
+<main>
+    <div class="player-container">
+        <div class="tools">
+            <ul class="menu palette">
+                <li class="bucket">
+                    <button class="menu__button">
+                        <i class="fas fa-fill-drip"></i>
+                        <span class="menu__item-text"><span class="_underlined">P</span>aint bucket</span>
+                    </button>
+                </li>
+                <li class="colorPicker">
+                    <button class="menu__button">
+                        <i class="fas fa-eye-dropper"></i>
+                        <span class="menu__item-text"><span class="_underlined">C</span>hoose color</span>
+                    </button>
+                </li>
+                <li class="moving">
+                    <button class="menu__button">
+                        <i class="fas fa-arrows-alt"></i>
+                        <span class="menu__item-text"><span class="_underlined">M</span>ove</span>
+                    </button>
+                </li>
+                <li class="transformation">
+                    <button class="menu__button">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span class="menu__item-text"><span class="_underlined">T</span>ransform</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="menu color-picker">
+                <li class="current-color">
+                    <button class="menu__button">
+                        <input type="color" class="_circle" name="current-color" value="#808080"/>
+                        <span class="menu__item-text">Current color</span>
+                    </button>
+                </li>
+                <li class="prev-color">
+                    <button class="menu__button">
+                        <span class="_circle"></span>
+                        <span class="menu__item-text">Prev color</span>
+                    </button>
+                </li>
+                <li class="red-color">
+                    <button class="menu__button">
+                        <span class="_circle _red"></span>
+                        <span class="menu__item-text">Red</span>
+                    </button>
+                </li>
+                <li class="blue-color">
+                    <button class="menu__button">
+                        <span class="_circle _blue"></span>
+                        <span class="menu__item-text">Blue</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="frames">
+            <div class="frame-items">
+                <div class="frame-container">
+                    <canvas class="frame _current" width="99" height="99" frame-index="0"></canvas>
+                    <div class="frame__index frame__tile">1</div>
+                    <div class="frame__duplicate-action frame__tile"><i class="fas fa-copy"></i></div>
+                    <div class="frame__remove-action frame__tile"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="frame__add-new">
+                <i class="fas fa-plus"></i>
+                <span class="frame__add-new-text">Add new frame</span>
+            </div>
+        </div>
+        <div class="canvas">
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+            <div class="canvas__item" draggable="true"></div>
+        </div>
+        <div class="preview">
+            <div class="preview-container">
+                <div class="preview__canvas-container">
+                    <canvas class="preview__canvas" width="200" height="200"></canvas>
+                </div>
+                <div class="preview__full-screen-action frame__tile"><i class="fas fa-expand-arrows-alt"></i></div>
+            </div>
+            <div class="preview__fps">
+                <span>0 FPS</span>
+                <input type="range" min="0" max="24" value="0">
+            </div>
+
+        </div>
+    </div>
+</main>
+<script src="app.bundle.js"></script>
+</body>
+</html>
